@@ -67,8 +67,10 @@ export default function StepOne() {
         <label className="inline-flex items-center cursor-pointer">
           <span
             className={`${
-              isMonthly ? "" : "font-medium text-primary-marine-blue"
-            }  me-3 text-sm font-medium`}
+              isMonthly
+                ? "text-neutral-cool-gray"
+                : "font-medium text-primary-marine-blue"
+            }  me-3 text-sm`}
           >
             Monthly
           </span>
@@ -79,7 +81,13 @@ export default function StepOne() {
             onChange={(e) => setIsMonthly(e.target.checked)}
           />
           <div className="relative w-11 h-6 bg-primary-marine-blue peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-pastel-blue rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-marine-blue"></div>
-          <span className={`{'font-medium text-primary-marine-blue' }ms-3 text-sm font-medium text-gray-900`}>
+          <span
+            className={`${
+              isMonthly
+                ? "font-medium text-primary-marine-blue"
+                : "text-neutral-cool-gray"
+            } ms-3 text-sm`}
+          >
             Yearly
           </span>
         </label>
