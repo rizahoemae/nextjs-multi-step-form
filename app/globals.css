@@ -17,6 +17,7 @@
 }
 
 body {
+  font-weight: 400;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -26,6 +27,26 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer base {
+  h1 {
+    @apply text-[2.5rem] font-bold;
+  }
+  input {
+    @apply px-3 py-2 border rounded-md w-full;
+  }
+  label {
+    @apply text-primary-marine-blue font-medium;
+  }
+  /* aside {
+    @apply bg-[url('/public/sidebar-desktop.svg')]
+  } */
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-3 py-2 bg-primary-marine-blue rounded-md text-white;
+  }
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
